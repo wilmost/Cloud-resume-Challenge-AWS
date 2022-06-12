@@ -23,6 +23,27 @@ Resources:
         IndexDocument: index.html
       BucketName: my-fantanstic-website
 
+
+  MyDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Origins:
+        - DomainName: my-fantanstic-website.s3-website-us-east-1.amazonaws.com
+          Id: my-fantanstic-website.s3-website-us-east-1.amazonaws.com
+          CustomOriginConfig:
+            OriginProtocolPolicy: match-viewer          
+        Enabled: 'true'
+        DefaultRootObject: index.html        
+        DefaultCacheBehavior:
+          ViewerProtocolPolicy: allow-all
+          TargetOriginId: my-fantanstic-website.s3-website-us-east-1.amazonaws.com
+          DefaultTTL: 0
+          MinTTL: 0
+          MaxTTL: 0         
+          ForwardedValues:
+            QueryString: 'false'
+
   BucketPolicy:
     Type: 'AWS::S3::BucketPolicy'
     Properties:
