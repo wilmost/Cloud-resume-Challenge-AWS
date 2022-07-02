@@ -41,7 +41,7 @@ def lambda_handler(event, context):
             'Access-Control-Allow-Methods': '*'
         },
         "body": json.dumps({
-            "count": "3",
+            "count": "157",
             # "location": ip.text.replace("\n", "")
         }),
     }
