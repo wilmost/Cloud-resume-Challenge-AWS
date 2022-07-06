@@ -32,3 +32,32 @@ Mycertificate:
             SslSupportMethod: sni-only
 
 ```
+
+
+9. Setup-JS
+
+```js
+
+fetch   
+
+
+```
+10.
+
+```yml
+
+DynamoDBTable: 
+    Type: AWS::DynamoDB::Table
+    Properties:
+        TableName: cloud-resume-challenge
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions: 
+            - AttributeName: "ID"
+            - AttributeType: "S"
+        KeySchema:
+            - AttributeName: "ID"
+              keyType: "HASH"
+
+
+
+```
