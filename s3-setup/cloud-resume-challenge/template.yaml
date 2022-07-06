@@ -22,7 +22,20 @@ Resources:
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
-      BucketName: my-fantanstic-website
+      BucketName: my-fantanstic-website 
+
+  
+  DynamoDBTable: 
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: cloud-resume-challenge
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: "ID"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "ID"
+          KeyType: "HASH"
 
 
 
@@ -36,9 +49,6 @@ Resources:
             AliasTarget:
               HostedZoneId: Z2FDTNDATAQYW2
               DNSName: !GetAtt MyDistribution.DomainName
-
-
-
 
 
   Mycertificate:
