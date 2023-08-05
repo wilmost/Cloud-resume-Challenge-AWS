@@ -5,7 +5,7 @@ The cloud resume challenge is a challenge by Forrest Brazeal to help people to p
 
 
 
-1. Certification  :couplekiss:
+1. Certification  
 2. HTML 
 3. CSS 
 4. Static Website 
@@ -22,5 +22,5 @@ The cloud resume challenge is a challenge by Forrest Brazeal to help people to p
 15. CI/CD (Front end)
 16. Blog post
 
-:heavy_check_mark: 
+
 
