@@ -12,13 +12,13 @@ def lambda_handler(event, context):
     currentVisitCount = int(response["Item"]["visitors"]) + 1
     dynamodb_table.update_item(
         Key={"ID": "visitors"},
-        UpdateExpression='ADD Visitors :inc',
+        UpdateExpression='ADD visitors :inc',
         ExpressionAttributeValues={':inc': 1}
                                
     )
     
     
-    data = {"visits": currentVisitCount} 
+    data = {"visitors": currentVisitCount} 
     
     response = {
         "statusCode": 200,
