@@ -40,7 +40,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
         # Build inside Docker containers
-      - run: sam buil src/backend/. --use-container 
+      - run: sam build src/backend/. --use-container 
         # Prevent prompts and failure when the stack is unchanged
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset  --capabilities CAPABILITY_NAMED_IAM
   
