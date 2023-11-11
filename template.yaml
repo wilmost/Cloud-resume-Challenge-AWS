@@ -73,7 +73,7 @@ Resources:
               QueryString: false
             LambdaFunctionAssociations:
               - EventType: viewer-response
-                LambdaFunctionARN: !GetAtt  lambda-at-edge-add-security-headers
+                LambdaFunctionARN: !GetAtt lambdaSecurityHeaders
         ViewerCertificate:
             AcmCertificateArn: !Ref Mycertificate
             SslSupportMethod: sni-only
@@ -150,7 +150,7 @@ Resources:
                   Resource: !GetAtt DynamoDBTable.Arn
 
 # Lambda@Edge security Headers
-  lambda-at-edge-add-security-headers:
+  lambdaSecurityHeaders:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: src/backend/lambda_security-headers
