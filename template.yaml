@@ -73,7 +73,7 @@ Resources:
               QueryString: false
             LambdaFunctionAssociations:
               - EventType: viewer-response
-                LambdaFunctionARN: !GetAtt lambdaSecurityHeaders
+                LambdaFunctionARN: !Ref lambdaSecurityHeaders
         ViewerCertificate:
             AcmCertificateArn: !Ref Mycertificate
             SslSupportMethod: sni-only
