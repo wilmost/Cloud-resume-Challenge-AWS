@@ -155,7 +155,7 @@ Resources:
     Properties:
       CodeUri: src/backend/lambda_security-headers
       Handler: index.handler
-      Runtime: Node.js 12.x
+      Runtime: Node.js 18.x
       Architectures:
         - x86_64
 
