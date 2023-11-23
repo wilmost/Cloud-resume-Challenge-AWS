@@ -5,7 +5,7 @@ on:
       branches:
         - main
       paths:
-      - src/resume-site/**
+      - 'src/resume-site/**'
   pull_request:
     branches:
       - main
