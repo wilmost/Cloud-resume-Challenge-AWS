@@ -2,9 +2,9 @@
 name : Update Website
 on:
   push:
-      branches:
-        - main
-      paths:
+    branches:
+      - main
+    paths:
       - 'src/resume-site/**'
   pull_request:
     branches:
